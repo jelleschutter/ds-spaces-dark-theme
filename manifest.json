@@ -1,0 +1,17 @@
+{
+  "name": "DS Spaces Dark Mode",
+  "version": "0.0.1",
+  "description": "Makes DS Spaces appear in a dark theme.",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["*://ds-spaces.technik.fhnw.ch/*"],
+      "exclude_matches": [
+        "*://ds-spaces.technik.fhnw.ch/wp-admin/*",
+        "*://ds-spaces.technik.fhnw.ch/*/wp-admin/*"
+      ],
+      "css": ["dark.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
